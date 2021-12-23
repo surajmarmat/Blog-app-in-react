@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+
+.blogMain{
+    margin: 0.3rem;
+    border-radius: 10px;
+    border: 2px solid rgba(128, 128, 128, 0.335);
+}
+
+.boxOne{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.titleBlog{
+    font-weight: 600;
+    border: 1px solid rgba(128, 128, 128, 0.699);
+    /* box-shadow: 0.5px 0.5px 4px rgba(25, 25, 212, 0.767); */
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    font-size: 2.2rem;
+    width: fit-content;
+    padding: 0.5rem;
+    /* color: rgb(49, 49, 209); */
+    color: black;
+    margin: 1rem;
+}
+
+.catBlog{
+    border: 0px solid blue;
+    color: white;
+    font-weight: 500;
+    padding: 0.2rem 1.3rem;
+    background: linear-gradient(to left, rgba(75, 130, 201, 0.836), rgba(55, 55, 206, 0.774) );;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: fit-content;
+    display: block;
+    height: 1.5rem;
+}
+
+.btns{
+    display: inline;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    /* margin-bottom: 1rem; */
+    /* border: 1px solid grey; */
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+}
+
+.btns i{
+    cursor: pointer;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0px 13px;
+}
+
+.btns i:hover{
+    color: blue;
+}
+
+.imageBlog img{
+    display: block;
+    margin: 0.6rem auto 1rem auto;
+    border-radius: 10px;
+    width: 97%;
+}
+
+.descBlog{
+    width: 96%;
+    font-size: 1.3rem;
+    font-family: 'poppins';
+    color: #363636;
+    font-weight: 400;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    word-spacing: 5px;
+    word-wrap: normal;
+    line-height: 2.2rem;
+}
+
+.autNameBlog{
+    margin: 1rem;
+    padding: 5px;
+    display: block;
+    width: fit-content;
+    border: 2px solid rgba(128, 128, 128, 0.698);
+    border-radius: 5px;
+}

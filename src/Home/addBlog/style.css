@@ -1,0 +1,104 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+.addBlog{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border: rgba(128, 128, 128, 0.472) 1px solid;
+    border-radius: 10px;
+    margin: 3.5rem auto;
+    height: 25rem;
+    width: 80%;
+}
+
+#btnBox{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    /* color: rgba(128, 128, 128, 0.233); */
+    color: rgb(80, 80, 204);
+    opacity: 0.6;
+}
+
+#btnBox:hover{
+    color: rgb(57, 57, 189);
+    opacity: 10;
+}
+
+#cancelBtn{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.addBlog .box{
+    display: none;
+    position: fixed;
+    border: 2px solid black;
+    border-radius: 8px;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 96%;
+    margin: auto;
+    background-color: rgba(173, 171, 171, 0.787);
+    background-color: white;
+}
+ 
+.addBlog form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    /* justify-content: center;
+    align-items: center;align-content: center; */
+    margin: 5rem auto;
+    left: 0;
+}
+
+.addBlog form input{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'poppins';
+    height: 1.6rem;
+    width: 80%;
+    border: 1.5px solid grey;
+    margin: 1rem 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+}
+
+#upImg{
+    border: 2px dashed grey;
+}
+
+.addBlog form .partOne button{
+    border: none;
+    outline: none;
+    background-color: rgb(54, 54, 207);
+    font-size: 1.2rem;
+    border-radius: 3px;
+    padding: 0.5rem;
+    color: white;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-left: 13rem;
+    cursor: pointer;
+}
+
+.addBlog form #desc{
+    width: 100%;
+    margin-top: -3rem;
+    padding: 0.5rem;
+    border: 1.5px solid grey;
+    outline: none;
+    border-radius: 5px;
+    height: 115%;
+    word-wrap: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'poppins';
+} 
