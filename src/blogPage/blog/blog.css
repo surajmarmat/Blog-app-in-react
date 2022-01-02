@@ -8,6 +8,12 @@
     border: 2px solid rgba(128, 128, 128, 0.335);
 }
 
+@media screen and (max-width:600px){
+    .blogMain{
+        border: 0px;
+    }
+}
+
 .boxOne{
     display: flex;
     flex-direction: row;
@@ -16,19 +22,31 @@
     flex-wrap: wrap;
 }
 
+@media screen and (max-width:600px){
+    .boxOne{
+        flex-direction: column;
+        align-content: flex-start;
+    }
+}
+
 .titleBlog{
     font-weight: 600;
-    border: 1px solid rgba(128, 128, 128, 0.699);
-    /* box-shadow: 0.5px 0.5px 4px rgba(25, 25, 212, 0.767); */
-    /* border: 1px solid black; */
+    border: 1.6px solid rgba(128, 128, 128, 0.699);
     border-radius: 10px;
     font-size: 2.2rem;
     width: fit-content;
     padding: 0.5rem;
-    /* color: rgb(49, 49, 209); */
     color: black;
     margin: 1rem;
 }
+
+@media screen and (max-width:600px) {
+    .titleBlog{
+        font-size: 1.6rem;
+        margin: 0.4rem;
+    }
+}
+
 
 .catBlog{
     border: 0px solid blue;
@@ -43,15 +61,28 @@
     height: 1.5rem;
 }
 
+@media screen and (max-width:600px){
+    .catBlog{
+        margin-left: 0.6rem;
+        font-size: 1.1rem;
+        padding: 0.2rem 0.8rem;
+    }
+}
+
 .btns{
     display: inline;
     position: absolute;
     top: 2rem;
     right: 1rem;
-    /* margin-bottom: 1rem; */
-    /* border: 1px solid grey; */
     border-radius: 5px;
     padding: 0.3rem 1rem;
+}
+
+@media screen and (max-width:600px) {
+    .btns{
+        top: 0.4rem;
+        right: -1rem;
+    }
 }
 
 .btns i{
@@ -67,11 +98,35 @@
     color: blue;
 }
 
+@media screen and (max-width:600px) {
+    .imageBlog{
+        border: 2px solid rgba(128, 128, 128, 0.082);
+        margin-top: 0.4rem;
+        border-radius: 6px;
+    }
+}
+
+hr{
+    width: 95%;
+    opacity: 0.9;
+    color: rgba(0, 0, 0, 0.705);
+    margin-bottom: 1.6rem;
+}
+
 .imageBlog img{
     display: block;
     margin: 0.6rem auto 1rem auto;
     border-radius: 10px;
     width: 97%;
+    object-fit: cover;
+    height: 26rem;
+}
+
+@media screen and (max-width:600px) {
+    .imageBlog img{
+        object-fit: contain;
+        height: 100%;
+    }
 }
 
 .descBlog{
@@ -94,6 +149,6 @@
     padding: 5px;
     display: block;
     width: fit-content;
-    border: 2px solid rgba(128, 128, 128, 0.698);
+    border: 1px solid rgba(128, 128, 128, 0.52);
     border-radius: 5px;
 }

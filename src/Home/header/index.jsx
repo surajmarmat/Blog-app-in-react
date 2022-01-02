@@ -4,12 +4,12 @@ import './style.css'
 const Header = () => {
     return (
         <div>
-            <div className="searchBar">
+            {/* <div className="searchBar">
                 <input type="text" placeholder='Search Here' />
                 <button>
                     Go
                 </button>
-            </div>
+            </div> */}
         </div>
     )
 }

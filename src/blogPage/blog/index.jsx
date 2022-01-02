@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './blog.css'
 
 var blogID = localStorage.getItem('tempID');
-let path = 'https://source.unsplash.com/1430x350/?/';
+let path = 'https://source.unsplash.com/1430x1250/?/';
 
 const BlogPage = () => {
 
@@ -41,12 +41,13 @@ const BlogPage = () => {
                 <div className="descBlog">
                     {localStorage.getItem('desc' + blogID)}
                 </div>
+                <hr />
             </div>
-            <div className="autNameBlog">
+            {/* <div className="autNameBlog">
                 {localStorage.getItem('autName' + blogID)}
                 <br />
                 {localStorage.getItem('date')}
-            </div>
+            </div> */}
             <footer>
 
             </footer>

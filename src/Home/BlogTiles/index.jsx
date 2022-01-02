@@ -5,16 +5,11 @@ let path = 'https://source.unsplash.com/350x200/?/';
 let path2 = 'https://source.unsplash.com/50x50/?face';
 
 var path3 = localStorage.getItem('imgFile' + id)
-// let path3Url = URL.createObjectURL(path3)
 
 const BlogTimes = (props) => {
-    console.log(path3)
-    // console.log(path3Url)
     const visitClicked = (event) => {
         var tempID = props.idMain;
-        // event.preventDefault();
         localStorage.setItem('tempID', tempID)
-        console.log(tempID)
     }
     return (
         <div>

@@ -10,10 +10,8 @@ var delId = localStorage.getItem('delete')
 
 var array = [];
 
-// console.log("this is from App " + blogId)
 
 for (let j = 0; j < id; j++) {
-    console.log('id from app loop ' + blogId)
     if (localStorage.getItem('delete'+j) == "true") {
         continue;
     }

@@ -1,17 +1,21 @@
 import './style.css'
 import React from 'react'
 import { useState } from 'react'
-import "../../../node_modules/react-quill/dist/quill.snow.css"
-
 
 var id = localStorage.getItem('id');
-console.log(id + "this is ID")
+
+if (id == null) {
+    console.log(id)
+    localStorage.setItem('id', 0);
+    id = localStorage.getItem('id');
+}
+
 localStorage.setItem('id2', id)
+
 var titles = []
 var cat = []
 var desc = []
 var autName = []
-var imgYahaHai;
 
 const AddBlog = () => {
     const [body, setBody] = useState("");
@@ -44,21 +48,15 @@ const AddBlog = () => {
         autName[id] = localStorage.getItem('autName' + id);
     }
     const catchTextDesc = (event) => {
-
         localStorage.setItem('desc' + id, event.target.value)
         desc[id] = localStorage.getItem('desc' + id);
     }
     const submitForm = (event) => {
-        console.log(titles)
-        console.log(desc)
-        console.log(autName)
-        console.log(cat)
-        console.log("number is the " + id)
         var delId = localStorage.getItem('delete'+id)
         if (delId == "true") {
             localStorage.setItem('delete'+id, "false")
         }
-        id++
+        id++;
         localStorage.setItem('id', id)
         var d = new Date;
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -71,10 +69,7 @@ const AddBlog = () => {
         }
 
     }
-    const selectedFile = (event) => {
-        console.log(event.target.files[0])
-        imgYahaHai = event.target.files[0]
-    }
+    
 
     return (
         <div>
@@ -91,11 +86,11 @@ const AddBlog = () => {
                             <input type="text" placeholder="Author Name" onChange={catchTextAN} id="AutName" />
                             <br />
                             <button onClick={submitForm} >
-                                Add
+                                +
                             </button>
                         </div>
                         <div>
-                            <textarea name="" placeholder="Write Your Blog Here..." id="desc" cols="30" rows="8" onChange={catchTextDesc} ></textarea>
+                            <textarea name="" placeholder="Write Your Blog Here..." id="desc" cols="30" rows="5" onChange={catchTextDesc} ></textarea>
                         </div>
                     </form>
                 </div>

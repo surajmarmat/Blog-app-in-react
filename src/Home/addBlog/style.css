@@ -1,13 +1,21 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
 
 .addBlog{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
     border: rgba(128, 128, 128, 0.472) 1px solid;
     border-radius: 10px;
     margin: 3.5rem auto;
     height: 25rem;
     width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    .addBlog{
+        margin: 1rem auto;
+        height: 22rem;
+    }
 }
 
 #btnBox{
@@ -30,12 +38,30 @@
     right: 1rem;
     top: 1rem;
     cursor: pointer;
+    color: white;
+    top: 1.8rem;
+    border: 0px solid rgb(57, 57, 189);
+    padding: 0.9rem 1rem;
+    background-color: rgb(57, 57, 189);
+    border-radius: 6px;
+}
+
+@media screen and (max-width:600px) {
+    #cancelBtn{
+        color: white;
+        top: 1.4rem;
+        border: 0px solid rgb(57, 57, 189);
+        padding: 1rem;
+        background-color: rgb(57, 57, 189);
+        border-radius: 6px;
+    }
+    
 }
 
 .addBlog .box{
     display: none;
     position: fixed;
-    border: 2px solid black;
+    border: 2px solid rgb(156, 155, 155);
     border-radius: 8px;
     top: 1rem;
     left: 0;
@@ -46,15 +72,20 @@
     background-color: rgba(173, 171, 171, 0.787);
     background-color: white;
 }
+
  
 .addBlog form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     width: 80%;
-    /* justify-content: center;
-    align-items: center;align-content: center; */
-    margin: 5rem auto;
+    margin: 1rem auto;
     left: 0;
+}
+
+@media screen and (max-width:600px) {
+    .addBlog form{
+        margin: 1rem 0rem;
+    }
 }
 
 .addBlog form input{
@@ -62,13 +93,22 @@
     font-weight: 400;
     font-family: 'poppins';
     height: 1.6rem;
-    width: 80%;
+    width: 10%;
     border: 1.5px solid grey;
-    margin: 1rem 1rem;
+    margin: 1rem 0.4rem;
     padding: 0.5rem;
     border-radius: 5px;
     outline: none;
 }
+
+@media screen and (max-width:600px) {
+    .addBlog form input{
+        width: 30%;
+        margin: 0.3rem;
+        font-size: 0.8rem;
+    }
+}
+
 
 #upImg{
     border: 2px dashed grey;
@@ -77,28 +117,49 @@
 .addBlog form .partOne button{
     border: none;
     outline: none;
+    position: absolute;
     background-color: rgb(54, 54, 207);
-    font-size: 1.2rem;
+    font-size: 2rem;
     border-radius: 3px;
-    padding: 0.5rem;
+    padding: 0rem 1rem;
     color: white;
     display: block;
-    margin: auto;
-    margin-top: 2rem;
-    margin-left: 13rem;
     cursor: pointer;
+    right: 1.2rem;
+    top: 5.4rem;
+}
+
+@media screen and (max-width: 600px) {
+    .addBlog form .partOne button{
+        position: absolute;
+        top: 4.8rem;
+        right: 1.2rem;
+    }
 }
 
 .addBlog form #desc{
     width: 100%;
-    margin-top: -3rem;
+    margin-top: 0rem;
     padding: 0.5rem;
     border: 1.5px solid grey;
     outline: none;
     border-radius: 5px;
-    height: 115%;
+    height: 32rem;
     word-wrap: normal;
     font-size: 1rem;
     font-weight: 400;
     font-family: 'poppins';
 } 
+@media screen and (max-width: 600px){
+    .addBlog form #desc{
+        margin: 0.6rem;
+        width: 110%;
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #AutName{
+        width: 80%;
+    }
+}
