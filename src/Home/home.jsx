@@ -32,7 +32,7 @@ const Home = () => {
     var dpMode = () =>{
         if (modeStr == 'Dark Mode') {
             // document.body.style.background = '#121212'
-            document.body.style.background = ' linear-gradient(to right top, #131315, #121215, #111114, #0f1014, #0e0f13)'
+            document.body.style.background = 'black)'
             changeMode('Light Mode') 
             changeBgColor('white');
         }
