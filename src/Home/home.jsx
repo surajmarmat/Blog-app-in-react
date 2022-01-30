@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './header'
 import BlogTiles from './BlogTiles'
 import AddBlog from './addBlog'
@@ -25,6 +25,25 @@ for (let j = 0; j < id; j++) {
 }
 
 const Home = () => {
+
+    let [modeStr, changeMode] = useState('Dark Mode');
+    let [bgColor, changeBgColor] = useState('#222');
+
+    var dpMode = () =>{
+        if (modeStr == 'Dark Mode') {
+            // document.body.style.background = '#121212'
+            document.body.style.background = ' linear-gradient(to right top, #131315, #121215, #111114, #0f1014, #0e0f13)'
+            changeMode('Light Mode') 
+            changeBgColor('white');
+        }
+        else if(modeStr == 'Light Mode'){
+            // document.body.style.background = '#fff'
+            document.body.style.background = 'white'
+            changeMode('Dark Mode')
+            changeBgColor('#222'); 
+        }
+    }
+
     return (
         <div className="App" >
             <h1>
@@ -35,7 +54,9 @@ const Home = () => {
             <p>
                 Start Writing Your Blogs From This Moment.
             </p>
-            <div className="container">
+            <button id="displayMode" onClick={dpMode} style={{background : bgColor}} >
+            </button>
+            <div className="container" >
                 <Header />
             </div>
             <div className="tiles">

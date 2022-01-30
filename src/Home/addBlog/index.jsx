@@ -1,6 +1,7 @@
 import './style.css'
 import React from 'react'
 import { useState } from 'react'
+import BT from "../BlogTiles"
 
 var id = localStorage.getItem('id');
 
@@ -23,8 +24,9 @@ const AddBlog = () => {
     const DP_N = "none"
     const DP_None = "none"
     const [DP, ChangeDP] = useState(DP_N)
+
     const [None, ChangeNone] = useState(DP_None)
-    function canClicked() {
+    function canClicked(event) {
         if (DP == "none") {
             let newDP = "flex";
             ChangeDP(newDP);
@@ -52,9 +54,9 @@ const AddBlog = () => {
         desc[id] = localStorage.getItem('desc' + id);
     }
     const submitForm = (event) => {
-        var delId = localStorage.getItem('delete'+id)
+        var delId = localStorage.getItem('delete' + id)
         if (delId == "true") {
-            localStorage.setItem('delete'+id, "false")
+            localStorage.setItem('delete' + id, "false")
         }
         id++;
         localStorage.setItem('id', id)
@@ -69,7 +71,25 @@ const AddBlog = () => {
         }
 
     }
-    
+
+    // const fileFound = (event) => {
+    //     var file = event.target.files[0];
+    //     var reader = new FileReader();
+    //     var url = reader.readAsDataURL(file);
+
+    //     reader.onloadend = function (e) {
+    //         console.log("From fileFound here")
+    //         newImgSrc(reader.result);
+    //         changeInputDisplay("none")
+    //         changeImgDisplay("block");
+    //     }.bind(this);
+    //     console.log("From fileFound here")
+    //     console.log(url)
+
+    //     localStorage.setItem('imgUrl', url);
+    // }
+
+
 
     return (
         <div>

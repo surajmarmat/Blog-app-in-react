@@ -6,11 +6,13 @@
     margin: 0.3rem;
     border-radius: 10px;
     border: 2px solid rgba(128, 128, 128, 0.335);
+    background-color: rgb(5, 10, 17);
 }
 
 @media screen and (max-width:600px){
     .blogMain{
         border: 0px;
+        background-color: rgb(17, 19, 24);
     }
 }
 
@@ -36,7 +38,7 @@
     font-size: 2.2rem;
     width: fit-content;
     padding: 0.5rem;
-    color: black;
+    color: rgb(216, 216, 216);
     margin: 1rem;
 }
 
@@ -76,6 +78,7 @@
     right: 1rem;
     border-radius: 5px;
     padding: 0.3rem 1rem;
+    color: gray;
 }
 
 @media screen and (max-width:600px) {
@@ -88,14 +91,15 @@
 .btns i{
     cursor: pointer;
     color: black;
-    border: 1px solid grey;
+    color: rgb(117, 116, 116);
+    border: 1px solid rgb(94, 93, 93);
     border-radius: 5px;
     padding: 8px;
     margin: 0px 13px;
 }
 
 .btns i:hover{
-    color: blue;
+    color: #1d65a8;
 }
 
 @media screen and (max-width:600px) {
@@ -111,6 +115,7 @@ hr{
     opacity: 0.9;
     color: rgba(0, 0, 0, 0.705);
     margin-bottom: 1.6rem;
+    margin-top: 4rem;
 }
 
 .imageBlog img{
@@ -133,7 +138,7 @@ hr{
     width: 96%;
     font-size: 1.3rem;
     font-family: 'poppins';
-    color: #363636;
+    color: #8f8f8f;
     font-weight: 400;
     text-align: left;
     margin-left: auto;
@@ -142,6 +147,19 @@ hr{
     word-spacing: 5px;
     word-wrap: normal;
     line-height: 2.2rem;
+}
+
+@media screen and (max-width:600px) {
+    .descBlog{
+        line-height: 1.6rem;
+        font-size: 1.1rem;
+        word-spacing: 2px;
+    }
+}
+@media screen and (max-width:600px){
+    hr{
+        display: none;
+    }
 }
 
 .autNameBlog{

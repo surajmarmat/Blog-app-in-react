@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
-    border: rgba(128, 128, 128, 0.472) 1px solid;
+    border: rgba(77, 77, 77, 0.822) 1.6px solid;
     border-radius: 10px;
     margin: 3.5rem auto;
     height: 25rem;
@@ -23,14 +23,14 @@
     width: fit-content;
     margin: auto;
     cursor: pointer;
-    /* color: rgba(128, 128, 128, 0.233); */
-    color: rgb(80, 80, 204);
+    color: cadetblue;
+    color: rgb(58, 140, 143);
+    color: #1d65a8;
     opacity: 0.6;
 }
 
 #btnBox:hover{
-    color: rgb(57, 57, 189);
-    opacity: 10;
+    opacity: 0.8;
 }
 
 #cancelBtn{
@@ -44,6 +44,7 @@
     padding: 0.9rem 1rem;
     background-color: rgb(57, 57, 189);
     border-radius: 6px;
+    background-color: rgb(78, 81, 87);
 }
 
 @media screen and (max-width:600px) {
@@ -54,6 +55,7 @@
         padding: 1rem;
         background-color: rgb(57, 57, 189);
         border-radius: 6px;
+        background-color: rgb(46, 49, 56);
     }
     
 }
@@ -61,18 +63,28 @@
 .addBlog .box{
     display: none;
     position: fixed;
-    border: 2px solid rgb(156, 155, 155);
     border-radius: 8px;
-    top: 1rem;
+    top: 0rem;
     left: 0;
     right: 0;
-    width: 90%;
-    height: 96%;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
     margin: auto;
-    background-color: rgba(173, 171, 171, 0.787);
-    background-color: white;
+    background-color: rgb(22, 21, 21);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.822);
 }
 
+@media screen and (max-width: 600px) {
+    .addBlog .box{
+        background-color: rgb(19, 24, 36);
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
  
 .addBlog form{
     display: flex;
@@ -92,20 +104,24 @@
     font-size: 1rem;
     font-weight: 400;
     font-family: 'poppins';
+    color: rgb(187, 187, 187);
     height: 1.6rem;
     width: 10%;
-    border: 1.5px solid grey;
+    border: 1.5px solid rgb(97, 97, 97);
     margin: 1rem 0.4rem;
     padding: 0.5rem;
     border-radius: 5px;
     outline: none;
+    background-color: rgb(17, 19, 24);
+    background-color: rgb(31, 33, 41);
 }
 
 @media screen and (max-width:600px) {
     .addBlog form input{
         width: 30%;
-        margin: 0.3rem;
+        margin: 0.3rem 0.5rem;
         font-size: 0.8rem;
+        background-color: rgb(17, 19, 24);
     }
 }
 
@@ -119,13 +135,14 @@
     outline: none;
     position: absolute;
     background-color: rgb(54, 54, 207);
+    background-color: rgb(78, 81, 87);
     font-size: 2rem;
     border-radius: 3px;
     padding: 0rem 1rem;
     color: white;
     display: block;
     cursor: pointer;
-    right: 1.2rem;
+    right: 1.1rem;
     top: 5.4rem;
 }
 
@@ -133,7 +150,8 @@
     .addBlog form .partOne button{
         position: absolute;
         top: 4.8rem;
-        right: 1.2rem;
+        right: 1.1rem;
+        background-color: rgb(46, 49, 56);
     }
 }
 
@@ -141,20 +159,65 @@
     width: 100%;
     margin-top: 0rem;
     padding: 0.5rem;
-    border: 1.5px solid grey;
+    border: 0px solid rgba(92, 92, 92, 0.664);
+    box-shadow: 0px 0px 6px black;
     outline: none;
+    color: rgb(160, 159, 159);
+    color: rgb(187, 187, 187);
     border-radius: 5px;
-    height: 32rem;
+    height: 38rem;
     word-wrap: normal;
     font-size: 1rem;
     font-weight: 400;
     font-family: 'poppins';
+    background-color: rgb(33, 43, 66);
+    background-color: rgb(31, 33, 41);
 } 
+
+#Input{
+    border: 1.6px solid rgba(128, 128, 128, 0.651);
+    width: fit-content;
+    margin-bottom: 5px;
+    color: gray;
+    text-align: left;
+    padding: 5px;
+    border-radius: 6px;
+    margin-left: 0.5rem;
+}
+
+#Input input{
+    border: none;
+    opacity: 0.8;
+    width: 80%;
+}
+
+#uploadedImg{
+    border: 0px solid white;
+    border-radius: 50%;
+    position: absolute;
+    right: 9rem;
+    top: 1.6rem;
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px){
+    #uploadedImg{
+        display: none;
+    }
+}
+
+
+
 @media screen and (max-width: 600px){
     .addBlog form #desc{
-        margin: 0.6rem;
-        width: 110%;
-        height: 25rem;
+        margin: 0.6rem 0.4rem;
+        width: 115%;
+        height: 50vh;
+        border: none;
+        background-color: rgb(17, 19, 24);
+        background-color: rgb(33, 43, 66);
     }
 }
 

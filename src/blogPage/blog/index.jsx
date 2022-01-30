@@ -7,15 +7,13 @@ let path = 'https://source.unsplash.com/1430x1250/?/';
 
 const BlogPage = () => {
 
-    const color = 'white'
-    const [prev, current] = useState(color);
 
     const deleted = (event) => {
         localStorage.setItem('delete' + blogID, "true");
     }
 
     return (
-        <div className="blogMain" style={{ backgroundColor: prev }} >
+        <div className="blogMain" >
             {/* This is the Blog Page. {blogID} */}
             <div className="boxOne">
                 <div className="titleBlog">

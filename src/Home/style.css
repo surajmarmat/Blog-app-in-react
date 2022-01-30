@@ -2,12 +2,27 @@
 
 h1{
     color: rgb(39, 39, 223);
+    color: rgb(64, 64, 241);
+    color: rgb(58, 140, 143);
+    color: cadetblue;
+    color: #BB86F6;
+    color: #add7ff;
+    color: #1d65a8;
     text-align: center;
     font-size: 2.5rem;
 }
 
+@media screen and (max-width: 600px) {
+    h1{
+        color: rgb(70, 70, 233);
+        color: cadetblue;
+        color: #1d65a8;
+        font-size: 2.3rem;
+    }
+}
+
 h1 span{
-    color: rgb(182, 177, 177);
+    color: rgb(138, 134, 134);
     margin: 5px;
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
@@ -18,6 +33,13 @@ h1 span{
     text-align: center;
     font-size: 1.4rem;
     color: rgb(107, 106, 106);
+}
+
+@media screen and (max-width: 600px) {
+    .App p{
+        font-size: 1.2rem;
+        margin-top: -0.5rem;
+    }
 }
 
 .tiles{
@@ -49,6 +71,28 @@ h1 span{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         margin-top: 2rem;
+    }
+}
+
+#displayMode{
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: 2px solid grey;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 1px 1px 15px rgb(92, 91, 91);
+}
+
+@media screen and (max-width: 700px){
+    #displayMode{
+        right: 1rem;
+        border-radius: 50%;
+        font-size: 12px;
+        top: 9rem;
     }
 }
 
